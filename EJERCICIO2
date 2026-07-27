@@ -1,0 +1,43 @@
+Algoritmo NotasGrupo
+	
+	Definir nota, suma, promedio, porcentaje Como Real
+	Definir aprobados, reprobados, total, op Como Entero
+	
+	suma <- 0
+	aprobados <- 0
+	reprobados <- 0
+	
+	Hacer
+		Escribir "Ingrese la nota (0.0 a 5.0): "
+		Leer nota
+		
+		Si nota >= 0 Y nota <= 5 Entonces
+			suma <- suma + nota
+			
+			Si nota >= 3 Entonces
+				aprobados <- aprobados + 1
+			SiNo
+				reprobados <- reprobados + 1
+			FinSi
+		SiNo
+			Escribir "Error: nota no valida"
+		FinSi
+		
+		Escribir "¿Desea ingresar otra nota? (1=Si, 0=No)"
+		Leer op
+	Mientras Que op = 1
+	
+	total <- aprobados + reprobados
+	
+	Si total > 0 Entonces
+		promedio <- suma / total
+		porcentaje <- (aprobados * 100) / total
+		
+		Escribir "Total de estudiantes: ", total
+		Escribir "Porcentaje de aprobados: ", porcentaje, "%"
+		Escribir "Promedio del grupo: ", promedio
+	SiNo
+		Escribir "No se ingresaron notas validas"
+	FinSi
+	
+FinAlgoritmo
