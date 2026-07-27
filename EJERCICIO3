@@ -1,0 +1,24 @@
+Proceso INVENTARIO_BODEGA
+	
+    Definir stock, retirar Como Entero
+	
+    Escribir "Ingrese el stock inicial:"
+    Leer stock
+	
+    Repetir
+		
+        Escribir "Cantidad a retirar (0 para terminar):"
+        Leer retirar
+		
+        Si retirar > stock Entonces
+            Escribir "Stock insuficiente. Disponible: ", stock, " unidades"
+        SiNo
+            stock = stock - retirar
+            Escribir "Nuevo stock: ", stock
+        FinSi
+		
+    Hasta Que stock = 0 O retirar = 0
+	
+    Escribir "Proceso finalizado."
+	
+FinProceso
