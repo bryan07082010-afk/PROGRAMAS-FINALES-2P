@@ -1,0 +1,26 @@
+Proceso ACCESO_CLAVE
+	
+    Definir clave, ingreso, intentos Como Entero
+	
+    clave = 07082010
+    intentos = 0
+	
+    Repetir
+		
+        Escribir "Ingrese la clave:"
+        Leer ingreso
+		
+        Si ingreso = clave Entonces
+            Escribir "Acceso Concedido. Inicializando rutina del brazo robótico"
+        SiNo
+            intentos <- intentos + 1
+            Escribir "Clave incorrecta."
+        FinSi
+		
+    Hasta Que ingreso = clave O intentos = 3
+	
+    Si ingreso <> clave Entonces
+        Escribir "ALERTA: Número máximo de intentos alcanzado. SISTEMA BLOQUEADO"
+    FinSi
+	
+FinProceso
