@@ -1,0 +1,34 @@
+Algoritmo Facturacion
+	
+	Definir precio, subtotal, total, iva, pagar Como Real
+	Definir cantidad Como Entero
+	
+	total = 0
+	
+	Hacer
+		Escribir "Precio del producto (0 para salir): "
+		Leer precio
+		
+		Si precio <> 0 Entonces
+			Escribir "Cantidad: "
+			Leer cantidad
+			
+			subtotal = precio * cantidad
+			
+			Si subtotal > 100000 Entonces
+				subtotal = subtotal - (subtotal * 0.10)
+			FinSi
+			
+			total = total + subtotal
+		FinSi
+		
+	Mientras Que precio <> 0
+	
+	iva = total * 0.19
+	pagar = total + iva
+	
+	Escribir "Total: $", total
+	Escribir "IVA: $", iva
+	Escribir "Valor a pagar: $", pagar
+	
+FinAlgoritmo
