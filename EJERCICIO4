@@ -1,0 +1,22 @@
+Proceso SISTEMA_TANQUE
+	
+    Definir nivel, litros Como Real
+	
+    Escribir "Ingrese el nivel inicial del tanque:"
+    Leer nivel
+	
+    Repetir
+		
+        Escribir "Litros que ingresan:"
+        Leer litros
+		
+        nivel = nivel + litros
+		
+        Escribir "Nivel actual: ", nivel, " litros"
+		
+    Hasta Que nivel >= 100
+	
+    Escribir "¡TANQUE LLENO! Desconectando bomba"
+    Escribir "Nivel final: ", nivel, " litros"
+	
+FinProceso
