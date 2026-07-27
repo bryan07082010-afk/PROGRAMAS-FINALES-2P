@@ -1,0 +1,35 @@
+Proceso MONITOREO_BANDA
+	
+    Definir peso Como Real
+    Definir aceptadas, rechazadas, opcion, total Como Entero
+	
+    aceptadas = 0
+    rechazadas = 0
+    total = 0
+    opcion =  1
+	
+    Repetir
+		
+        Escribir "Ingrese el peso de la pieza:"
+        Leer peso
+		
+        Si peso >= 45 Y peso <= 55 Entonces
+            Escribir "Aceptada"
+            aceptadas = aceptadas + 1
+        SiNo
+            Escribir "Rechazada"
+            rechazadas = rechazadas + 1
+        FinSi
+		
+        total = total + 1
+		
+        Escribir "Desea procesar otra pieza? (1=Si, 0=No)"
+        Leer opcion
+		
+    Hasta Que opcion = 0
+	
+    Escribir "Total de piezas: ", total
+    Escribir "Aceptadas: ", aceptadas
+    Escribir "Rechazadas: ", rechazadas
+	
+FinProceso
